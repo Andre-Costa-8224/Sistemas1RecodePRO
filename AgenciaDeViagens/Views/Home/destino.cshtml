@@ -1,0 +1,56 @@
+﻿@model MeuTeste.Models.Viagem;
+@{
+    ViewData["Title"] = "Destinos";
+}
+<body class="corpo" style="background-image: url('/media/beach-g9dd9f76c6_1920.jpg');">
+    <main style="margin: 7px;">
+        <section class="art">
+            <article>
+                <h1>Valores</h1>
+                <h4>Primeira classe:</h4>
+                <p>Regional: de R$600,00 até R$1400,00</p>
+                <p>Internacional Ocidente: de R$1200,00 até R$4000,00</p>
+                <p>Internacional Oriente/Oceania: de R$1350 até R$5500,00</p>
+                <h4>Econômica:</h4>
+                <p>Regional: de R$300,00 até R$1000,00</p>
+                <p>Internacional Ocidente: de R$800,00 até R$3500,00</p>
+                <p>Internacional Oriente/Oceania: de R1150,00 até R$5000,00</p>
+            </article>
+            <article>
+                <h1>Novo destino</h1>
+                <div class="row">
+                    <div class="col-md-4">
+                        <form asp-action="destino" method="post">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            
+                            <div class="form-group">
+                                <label asp-for="data" class="control-label"></label>
+                                <input asp-for="data" type="date" class="form-control" />
+                                <span asp-validation-for="data" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="passagem" class="control-label"></label>
+                                <input asp-for="passagem" type="number" class="form-control" value="0" placeholder="Quantidade"/>
+                                <span asp-validation-for="passagem" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="destino" class="control-label"></label>
+                                <input asp-for="destino" type="text" class="form-control"/>
+                                <span asp-validation-for="destino" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Enviar" class="btn btn-primary" />
+                            </div>
+                        </form>
+                        <div>
+                            
+                        </div>
+                    </div>
+                </div>
+                @section Scripts {
+                    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+                }
+            </article>
+        </section>
+    </main>
+</body>

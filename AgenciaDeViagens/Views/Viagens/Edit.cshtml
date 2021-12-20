@@ -1,0 +1,49 @@
+﻿@model MeuTeste.Models.Viagem
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<h1>Editar</h1>
+
+<h4>Viagem</h4>
+<hr />
+<main class="prin">
+    <section class="art">
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="ID_Viagem" />
+                    <div class="form-group">
+                        <label asp-for="destino" class="control-label"></label>
+                        <input asp-for="destino" class="form-control" />
+                        <span asp-validation-for="destino" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="data" class="control-label"></label>
+                        <input asp-for="data" class="form-control" />
+                        <span asp-validation-for="data" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="passagem" class="control-label"></label>
+                        <input asp-for="passagem" class="form-control" />
+                        <span asp-validation-for="passagem" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div>
+            <a asp-action="Index">Voltar para lista</a>
+        </div>
+    </section>
+</main>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

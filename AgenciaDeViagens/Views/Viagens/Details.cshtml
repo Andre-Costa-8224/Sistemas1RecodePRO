@@ -1,0 +1,40 @@
+﻿@model MeuTeste.Models.Viagem
+
+@{
+    ViewData["Title"] = "Seus dados";
+}
+
+<h1>Seus dados</h1>
+<main class="prin">
+    <section class="art">
+        <div>
+            <h4>Viagem</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.destino)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.destino)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.data)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.data)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.passagem)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.passagem)
+                </dd>
+            </dl>
+        </div>
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model.ID_Viagem">Editar</a> |
+            <a asp-action="Index">Voltar para lista</a>
+        </div>
+    </section>
+</main>
+

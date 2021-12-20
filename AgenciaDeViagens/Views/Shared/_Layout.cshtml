@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MeuTeste</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/style1.css">
+</head>
+<body class="corpo">
+
+    <header>
+        <nav class="menu">
+            <span><img src="~/media/GRANDBLUETRAVEL.png" alt="logo" width="100"></span>
+            <ul class="lista">
+                <li><a asp-controller="Home" asp-action="Index" class="itens forma change">HOME</a></li>
+                <li><a asp-controller="Home" asp-action="destino" class="itens forma change">DESTINO</a></li>
+                <li><a asp-controller="Home" asp-action="promocoes" class="itens forma change">PROMOÇÕES</a></li>
+                <li><a asp-controller="Home" asp-action="contato" class="itens forma change">CONTATOS</a></li>
+                <li><a asp-controller="Home" asp-action="dados" class="itens forma change">DADOS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <footer class="rodape"><strong>&copyAndré F S Costa</strong></footer>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

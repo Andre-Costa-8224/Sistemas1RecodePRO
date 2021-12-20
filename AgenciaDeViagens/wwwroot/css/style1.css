@@ -1,0 +1,110 @@
+﻿
+.corpo {
+    background-color: rgb(203, 255, 238);
+    margin: 0;
+    background-image: url("/media/polynesia-g02d5ecac2_1920.jpg");
+    max-width: 4060px;
+    max-height: 4060px;
+}
+
+
+
+.menu {
+    display: flex;
+    padding: 5px;
+    justify-content: flex-start;
+}
+
+.lista {
+    display: flex;
+    list-style: none;
+    align-self: center;
+    margin: auto;
+}
+
+.itens {
+    text-decoration: none;
+    color: black;
+    font: bolder;
+}
+
+.forma {
+    padding: 10px;
+    box-shadow: 2px 2px black;
+}
+
+.change:hover {
+    background-color: rgb(72, 255, 255);
+    transition: 0.9s;
+    box-shadow: 5px 5px rgb(228, 255, 107);
+}
+
+.btn {
+    border-radius: 10px;
+}
+
+    .btn:hover {
+        background-color: rgb(72, 255, 255);
+        transition: 0.9s;
+        box-shadow: 2px 2px rgb(179, 255, 0);
+    }
+
+.rodape {
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    font-size: large;
+    font: bolder;
+    color: rgb(2, 0, 121);
+}
+
+.art {
+    display: -ms-flexbox;
+    text-align: justify;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: 1px solid rgb(68, 171, 255);
+    margin-bottom: 10px;
+    border-radius: 50px;
+    background-color: none;
+    color: azure;
+    padding: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+    .art:hover {
+        background-color: rgb(188, 255, 255);
+        color: black;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+.prin {
+    margin-top: 100px;
+}
+
+.boxback {
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    margin: 2px;
+}
+
+    .boxback:hover {
+        box-shadow: 1px 1px cyan;
+        border-radius: 8px;
+        background-color: aquamarine;
+    }
+
+.lbl {
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.area {
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 30px;
+    border: 1px solid black;
+}
